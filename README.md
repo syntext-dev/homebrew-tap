@@ -1,23 +1,22 @@
 # Syntext Homebrew Tap
 
-Homebrew formula for distributing the Syntext CLI on macOS and Linux.
+Homebrew formula for `stx`, the Syntext CLI: write, preview and publish Syntext docs from your terminal. macOS and Linux.
 
 ## Installation
 
 ```bash
-brew tap syntext/tap
-brew install syntext
+brew install syntext-dev/tap/stx
 ```
 
 ## Structure
 
 ```
 Formula/
-└── syntext.rb          # Homebrew formula
+└── stx.rb              # Homebrew formula (regenerated on each CLI release; don't edit by hand)
 ```
 
 ## Release Process
-1. CLI binary built in `apps/cli/` CI pipeline
-2. Binary uploaded to GitHub Releases
-3. Formula updated with new version SHA + URL
-4. Users get updates via `brew upgrade syntext`
+1. A `vX.Y.Z` tag on [syntext-dev/syntext](https://github.com/syntext-dev/syntext) builds the CLI binaries
+2. Binaries and checksums are uploaded to GitHub Releases
+3. The release workflow rewrites `Formula/stx.rb` with the new version, URLs and SHA-256s
+4. Users get updates via `brew upgrade stx`
