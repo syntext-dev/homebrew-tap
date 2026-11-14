@@ -1,22 +1,22 @@
 class Stx < Formula
-  desc "AI-powered developer documentation CLI"
+  desc "Write, preview and publish Syntext docs from your terminal"
   homepage "https://syntext.dev"
-  version "0.8.1"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/syntext-dev/syntext/releases/download/v0.8.1/stx-darwin-arm64.tar.gz"
-      sha256 "5f19db7fa7596d85064616ec0556094ee66f84aedb0dede732e54948aee52fac"
+      url "https://github.com/syntext-dev/syntext/releases/download/v0.9.0/stx-darwin-arm64.tar.gz"
+      sha256 "bb56e0c836fb2365cc3bcf26a0918a875f40c7f0f261098c71e4295bea95d9e4"
     else
-      url "https://github.com/syntext-dev/syntext/releases/download/v0.8.1/stx-darwin-x64.tar.gz"
-      sha256 "53dca2fffe996dbca5340874d7d4f9ab4fb0536e4ed37767643645b83e9e5c99"
+      url "https://github.com/syntext-dev/syntext/releases/download/v0.9.0/stx-darwin-x64.tar.gz"
+      sha256 "29f9acf1dbc7f943e39d8bef63423e3c5bae13ad98c6a0481a3d24f9e3a82e5c"
     end
   end
 
   on_linux do
-    url "https://github.com/syntext-dev/syntext/releases/download/v0.8.1/stx-linux-x64.tar.gz"
-    sha256 "36b02eb9fe00a372144d3f746908b03a53fa9ccaf728a497ea5fa65772c117a5"
+    url "https://github.com/syntext-dev/syntext/releases/download/v0.9.0/stx-linux-x64.tar.gz"
+    sha256 "ab85df86fbefa2195ac0feaa5fe5b8e78507b26cf0d29e73d762098c86bdba86"
   end
 
   def install
@@ -24,6 +24,6 @@ class Stx < Formula
   end
 
   test do
-    assert_match "0.8.1", shell_output("#{bin}/stx --version")
+    assert_match "0.9.0", shell_output("#{bin}/stx --version")
   end
 end
