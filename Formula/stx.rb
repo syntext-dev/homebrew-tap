@@ -1,22 +1,22 @@
 class Stx < Formula
   desc "Write, preview and publish Syntext docs from your terminal"
   homepage "https://syntext.dev"
-  version "0.11.4"
+  version "0.11.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/syntext-dev/syntext/releases/download/v0.11.4/stx-darwin-arm64.tar.gz"
-      sha256 "52bca5d271d66a98ff9c57776aab94bcedfefdbf290b34497512c1cd66d27521"
+      url "https://github.com/syntext-dev/syntext/releases/download/v0.11.5/stx-darwin-arm64.tar.gz"
+      sha256 "608c69fa2c7c5922da6d3d17789150f5da43d0742926dc7038b46be48c1fb230"
     else
-      url "https://github.com/syntext-dev/syntext/releases/download/v0.11.4/stx-darwin-x64.tar.gz"
-      sha256 "05f803fbba6e4e116941bc15cef501e16ab0c9f0a205eb657b3ebb4c89a941f9"
+      url "https://github.com/syntext-dev/syntext/releases/download/v0.11.5/stx-darwin-x64.tar.gz"
+      sha256 "af038cead77556909d1b8ae7332eb9da43e86a491df6b50c349eb9846d3105d9"
     end
   end
 
   on_linux do
-    url "https://github.com/syntext-dev/syntext/releases/download/v0.11.4/stx-linux-x64.tar.gz"
-    sha256 "9d6eeb6f1df050d3648c3af3d512a4423c6d17c4c77fc0e2d986f3e5eb3ed86b"
+    url "https://github.com/syntext-dev/syntext/releases/download/v0.11.5/stx-linux-x64.tar.gz"
+    sha256 "a3dcd610d161c0d68bab6cd77f5918b415c22581cad60bf1e1ab847d7a1c9efd"
   end
 
   def install
@@ -24,6 +24,6 @@ class Stx < Formula
   end
 
   test do
-    assert_match "0.11.4", shell_output("#{bin}/stx --version")
+    assert_match "0.11.5", shell_output("#{bin}/stx --version")
   end
 end
